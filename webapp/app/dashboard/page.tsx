@@ -10,7 +10,6 @@ import {
   Plus,
   Settings,
   TrendingUp,
-  User,
   Award,
   Activity,
   CheckCircle2,
@@ -129,12 +128,6 @@ export default function DashboardPage() {
               <Button variant="ghost" size="icon">
                 <Settings className="h-5 w-5 text-teal-700" />
                 <span className="sr-only">Settings</span>
-              </Button>
-            </Link>
-            <Link href="/profile">
-              <Button variant="ghost" size="icon" className="rounded-full bg-blue-100">
-                <User className="h-5 w-5 text-blue-700" />
-                <span className="sr-only">Profile</span>
               </Button>
             </Link>
           </div>
