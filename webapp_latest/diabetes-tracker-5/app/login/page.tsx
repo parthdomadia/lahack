@@ -26,15 +26,15 @@ export default function LoginPage() {
             <CardDescription className="text-center">Sign in to your account to continue</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4 pt-6">
-            <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="Enter your email"
-                className="border-gray-200 focus-visible:ring-teal-500"
-              />
-            </div>
+          {(() => {
+              const emailInput = (
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input id="email" type="email" placeholder="Enter your email" />
+                </div>
+              );
+              return emailInput;
+            })()}
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <Label htmlFor="password">Password</Label>
@@ -59,7 +59,8 @@ export default function LoginPage() {
           <CardFooter className="flex flex-col space-y-4">
             <Button className="w-full bg-teal-600 text-white hover:bg-teal-700">
               <Link href="/dashboard" className="w-full">
-                Sign In
+                Sign In 
+
               </Link>
             </Button>
             <div className="text-center text-sm">
