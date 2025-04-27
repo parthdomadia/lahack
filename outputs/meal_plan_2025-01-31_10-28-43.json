@@ -1,0 +1,80 @@
+[
+  {
+    "meal_type": "Breakfast",
+    "estimated_glucose_impact": "Minimal",
+    "meal_name": "Spinach and Feta Omelet with Berries",
+    "meal_description": "Start your day with a fluffy omelet filled with vibrant spinach and salty feta cheese. Served alongside a small handful of fresh mixed berries, this breakfast is both satisfying and delicious. It's a great way to fuel your morning without a significant blood sugar spike.",
+    "nutritional_stats": {
+      "carbs": "10g",
+      "protein": "25g",
+      "fat": "20g",
+      "calories": "320"
+    },
+    "why_this_works": "The high protein and fat content of the omelet will help slow down glucose absorption. The small serving of berries provides some fiber and antioxidants without significantly raising blood sugar levels. This combination will keep you feeling full and stable."
+  },
+  {
+    "meal_type": "Lunch",
+    "estimated_glucose_impact": "Low",
+    "meal_name": "Grilled Chicken Salad with Avocado and Mixed Greens",
+    "meal_description": "Enjoy a refreshing and protein-packed lunch with grilled chicken breast served on a bed of mixed greens. Top it with creamy avocado slices, crunchy cucumber, and a light vinaigrette dressing. This salad is a delightful and healthy way to stay on track.",
+    "nutritional_stats": {
+      "carbs": "15g",
+      "protein": "35g",
+      "fat": "25g",
+      "calories": "450"
+    },
+    "why_this_works": "Lean protein from the chicken and healthy fats from the avocado promote satiety and help regulate blood sugar. The mixed greens provide fiber, further slowing down glucose absorption. This meal offers sustained energy without a rapid glucose spike."
+  },
+  {
+    "meal_type": "Dinner",
+    "estimated_glucose_impact": "Moderate",
+    "meal_name": "Baked Salmon with Asparagus and Cauliflower Mash",
+    "meal_description": "Indulge in a flavorful and nutritious dinner with baked salmon, seasoned to perfection. Accompanied by tender asparagus spears and creamy cauliflower mash, this meal is both satisfying and healthy. It's a wonderful way to end your day on a positive note.",
+    "nutritional_stats": {
+      "carbs": "20g",
+      "protein": "40g",
+      "fat": "30g",
+      "calories": "520"
+    },
+    "why_this_works": "Salmon provides healthy omega-3 fatty acids and protein, promoting stable blood sugar levels. Cauliflower mash is a great low-carb alternative to traditional mashed potatoes. The combination of protein, fat, and fiber helps minimize glucose spikes after the meal."
+  },
+  {
+    "meal_type": "Snack",
+    "estimated_glucose_impact": "Very Low",
+    "meal_name": "Handful of Almonds",
+    "meal_description": "A small handful of almonds offers a satisfying crunch and a boost of healthy fats. A perfect snack between meals to keep you feeling full and energized.",
+    "nutritional_stats": {
+      "carbs": "6g",
+      "protein": "6g",
+      "fat": "14g",
+      "calories": "164"
+    },
+    "why_this_works": "Almonds are a good source of healthy fats and fiber, which can help stabilize blood sugar levels. They are also low in carbohydrates, making them a great snack choice for managing diabetes."
+  },
+  {
+    "meal_type": "Snack",
+    "estimated_glucose_impact": "Very Low",
+    "meal_name": "Celery Sticks with Cream Cheese",
+    "meal_description": "Enjoy the satisfying crunch of celery sticks paired with a dollop of creamy cream cheese. This snack is both refreshing and a great way to curb cravings.",
+    "nutritional_stats": {
+      "carbs": "5g",
+      "protein": "2g",
+      "fat": "10g",
+      "calories": "120"
+    },
+    "why_this_works": "Celery is very low in carbohydrates and provides fiber, which slows down digestion. The cream cheese adds healthy fats, further minimizing any potential glucose impact. This snack helps to stabilize blood sugar between meals."
+  },
+  {
+    "meal_type": "Snack",
+    "estimated_glucose_impact": "Minimal",
+    "meal_name": "Small Greek Yogurt (Plain, Unsweetened)",
+    "meal_description": "A small serving of plain, unsweetened Greek yogurt provides a creamy and protein-rich snack. It's a great option to keep you feeling full and satisfied.",
+    "nutritional_stats": {
+      "carbs": "7g",
+      "protein": "15g",
+      "fat": "0g",
+      "calories": "80"
+    },
+    "why_this_works": "Greek yogurt is a good source of protein, which helps to slow down glucose absorption and keep you feeling full. Choosing plain, unsweetened varieties avoids added sugars that could spike blood sugar levels. This snack helps regulate blood sugar effectively."
+  }
+]

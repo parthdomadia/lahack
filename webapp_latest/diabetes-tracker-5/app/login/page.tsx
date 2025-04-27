@@ -1,9 +1,11 @@
+"use client"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
+import { use } from "react"
 
 export default function LoginPage() {
   return (
@@ -26,7 +28,7 @@ export default function LoginPage() {
             <CardDescription className="text-center">Sign in to your account to continue</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4 pt-6">
-          {(() => {
+           {(() => {
               const emailInput = (
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
@@ -35,20 +37,25 @@ export default function LoginPage() {
               );
               return emailInput;
             })()}
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
+            {(() => {
+              const passwordInput = (
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
                 <Label htmlFor="password">Password</Label>
                 <Link href="/forgot-password" className="text-xs text-teal-700 hover:text-teal-800 hover:underline">
                   Forgot password?
                 </Link>
-              </div>
-              <Input
+                </div>
+                <Input 
                 id="password"
                 type="password"
                 placeholder="Enter your password"
                 className="border-gray-200 focus-visible:ring-teal-500"
-              />
-            </div>
+                />
+              </div>
+              );
+              return passwordInput;
+            })()}
             <div className="flex items-center space-x-2 pt-2">
               <Checkbox id="remember" />
               <Label htmlFor="remember" className="text-sm text-gray-600">
@@ -56,12 +63,42 @@ export default function LoginPage() {
               </Label>
             </div>
           </CardContent>
-          <CardFooter className="flex flex-col space-y-4">
-            <Button className="w-full bg-teal-600 text-white hover:bg-teal-700">
-              <Link href="/dashboard" className="w-full">
-                Sign In 
+            <CardFooter className="flex flex-col space-y-4">
+            <Button
+              className="w-full bg-teal-600 text-white hover:bg-teal-700"
+              onClick={async () => {
+              const email = (document.getElementById("email") as HTMLInputElement)?.value;
+              const password = (document.getElementById("password") as HTMLInputElement)?.value;
 
-              </Link>
+              if (!email || !password) {
+                alert("Please fill in both email and password.");
+                return;
+              }
+
+              try {
+                const response = await fetch("http://localhost:5000/login", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email: email, password: password }),
+                });
+
+                if (response.ok) {
+                const data = await response.json();
+                // Redirect to dashboard or handle success
+                window.location.href = "/dashboard";
+                } else {
+                const error = await response.json();
+                alert(error.message || "Login failed. Please try again.");
+                }
+              } catch (error) {
+                console.error("Error during login:", error);
+                alert("An error occurred. Please try again later.");
+              }
+              }}
+            >
+              Sign In
             </Button>
             <div className="text-center text-sm">
               Don't have an account?{" "}

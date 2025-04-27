@@ -1,0 +1,5 @@
+<script>start("/Users/emmadiamon/lahack/pdf/");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("diabetic_patient.pdf","diabetic_patient.pdf",0,1348,"1.3 kB",1745727557,"4/26/25, 9:19:17 PM");</script>
+<script>addRow("non_diabetic_patient.pdf","non_diabetic_patient.pdf",0,1335,"1.3 kB",1745727561,"4/26/25, 9:19:21 PM");</script>
+<script>addRow("pre_diabetic_patient.pdf","pre_diabetic_patient.pdf",0,1361,"1.3 kB",1745727565,"4/26/25, 9:19:25 PM");</script>

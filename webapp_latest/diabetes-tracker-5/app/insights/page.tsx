@@ -38,7 +38,7 @@ export default function InsightsPage() {
           carbs: Math.floor(Math.random() * 30) + 20,
           sugar: Math.floor(Math.random() * 15) + 2,
           water: Math.floor(Math.random() * 200) + 100,
-          foodItems: ["Grilled chicken", "Brown rice", "Steamed broccoli", "Olive oil"],
+          foodItems: ["Avacado", "Bacon", "Potatoes", "Milkshake", "Blackberries", "Eggs", "Bread"],
         })
         setIsAnalyzing(false)
       }, 2000)

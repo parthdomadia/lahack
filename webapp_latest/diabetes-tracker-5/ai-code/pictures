@@ -1,0 +1,6 @@
+<script>start("/Users/emmadiamon/lahack/pictures/");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("breakfast_test.jpg","breakfast_test.jpg",0,539752,"527 kB",1745677875,"4/26/25, 7:31:15 AM");</script>
+<script>addRow("burger.jpg","burger.jpg",0,59484,"58.1 kB",1745727301,"4/26/25, 9:15:01 PM");</script>
+<script>addRow("healthy.jpg","healthy.jpg",0,124590,"122 kB",1745727296,"4/26/25, 9:14:56 PM");</script>
+<script>addRow("pancake-muffins.jpg","pancake-muffins.jpg",0,123573,"121 kB",1745722959,"4/26/25, 8:02:39 PM");</script>

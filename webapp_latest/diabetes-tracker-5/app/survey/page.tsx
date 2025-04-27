@@ -321,22 +321,42 @@ export default function SurveyPage() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label>Upload Medical Records (Optional)</Label>
-                  <div className="flex items-center justify-center rounded-lg border border-dashed border-teal-300 bg-teal-50/50 p-6">
+                    <Label>Upload Medical Records (Optional)</Label>
+                    <div className="flex items-center justify-center rounded-lg border border-dashed border-teal-300 bg-teal-50/50 p-6">
                     <div className="flex flex-col items-center space-y-2">
                       <FileUp className="h-8 w-8 text-teal-500" />
                       <p className="text-sm text-gray-600">
-                        Drag and drop your medical records here, or click to browse
+                      Drag and drop your medical records here, or click to browse
                       </p>
-                      <Input id="file-upload" type="file" className="hidden" />
-                      <Button variant="outline" size="sm" className="border-teal-200 text-teal-700 hover:bg-teal-100">
-                        Browse Files
+                      <Input
+                      id="file-upload"
+                      type="file"
+                      className="hidden"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (file) {
+                        console.log("File selected:", file);
+                        // Prepare the file for API call
+                        const formData = new FormData();
+                        formData.append("medicalRecord", file);
+                        // Example: Send formData to an API endpoint
+                        fetch('http://localhost:5000/upload', { method: 'POST', body: formData });
+                        }
+                      }}
+                      />
+                      <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-teal-200 text-teal-700 hover:bg-teal-100"
+                      onClick={() => document.getElementById("file-upload")?.click()}
+                      >
+                      Browse Files
                       </Button>
-                      <p className="text-xs text-gray-500">Supported formats: PDF, JPG, PNG (Max 10MB)</p>
+                      <p className="text-xs text-gray-500">Supported formats: PDF ONLY (Max 10MB)</p>
+                    </div>
                     </div>
                   </div>
                 </div>
-              </div>
             )}
 
             {step === 5 && (

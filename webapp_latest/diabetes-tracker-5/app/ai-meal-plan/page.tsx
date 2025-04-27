@@ -104,7 +104,7 @@ export default function AIMealPlanPage() {
               </Link>
             </div>
           </div>
-        </nav>
+        </nav>z
         <main className="flex-1 overflow-auto">
           <div className="container mx-auto px-4 py-6">
             <div className="mb-6">
