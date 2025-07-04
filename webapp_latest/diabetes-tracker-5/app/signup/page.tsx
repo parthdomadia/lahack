@@ -64,7 +64,7 @@ export default function SignupPage() {
                 if (password === confirmPassword) {
                   // Here you would typically handle the signup logic, e.g., sending the data to your backend
                   
-                  fetch("http://localhos:5000/create_account", {
+                  fetch("http://localhost:5000/create_account", {
                   method: "POST",
                   headers: {
                     "Content-Type": "application/json",
